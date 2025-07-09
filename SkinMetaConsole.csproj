@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1A6D6B0-EE4B-45E2-96C3-02591F55A7E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SkinMetaConsole</RootNamespace>
+    <AssemblyName>SkinMetaConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="CurrentUserManager.cs" />
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login2.Designer.cs">
+      <DependentUpon>login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productCatalog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="productCatalog.Designer.cs">
+      <DependentUpon>productCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionareSensitivity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionareSensitivity.Designer.cs">
+      <DependentUpon>QuestionareSensitivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionareSkinConcerns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionareSkinConcerns.Designer.cs">
+      <DependentUpon>QuestionareSkinConcerns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuestionareSkinType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuestionareSkinType.Designer.cs">
+      <DependentUpon>QuestionareSkinType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuetionareAcne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuetionareAcne.Designer.cs">
+      <DependentUpon>QuetionareAcne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recommendation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recommendation.Designer.cs">
+      <DependentUpon>Recommendation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="routine.Designer.cs">
+      <DependentUpon>routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkinDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkinDiary.Designer.cs">
+      <DependentUpon>SkinDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracker.Designer.cs">
+      <DependentUpon>Tracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfile.Designer.cs">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login2.resx">
+      <DependentUpon>login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="productCatalog.resx">
+      <DependentUpon>productCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuestionareSensitivity.resx">
+      <DependentUpon>QuestionareSensitivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionareSkinConcerns.resx">
+      <DependentUpon>QuestionareSkinConcerns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuestionareSkinType.resx">
+      <DependentUpon>QuestionareSkinType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuetionareAcne.resx">
+      <DependentUpon>QuetionareAcne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recommendation.resx">
+      <DependentUpon>Recommendation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="routine.resx">
+      <DependentUpon>routine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkinDiary.resx">
+      <DependentUpon>SkinDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracker.resx">
+      <DependentUpon>Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfile.resx">
+      <DependentUpon>UserProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spa, beauty cosmetics and body care treatment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jade roller and gua sha stone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman free icons designed by Prosymbols Premium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SKIN META LOGO.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nuke Radioactive Nuclear Radiation Warning Symbol Logo Vinyl Decal Sticker - 4 Inches Long.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thermometer snow cold temperature icon vector image on VectorStock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Pollution free icons designed by Freepik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_20250329-151354~2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-04-17 at 7.07.58 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InShot_20250417_190932744.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InShot_20250418_225812519.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
